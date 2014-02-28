@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "description": "a javascript module manager",
     "main": "lib/miss.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xianlihua/miss.js.git"
+    },
     "scripts": {
         "build": "grunt build",
         "start": "npm install && npm run build"

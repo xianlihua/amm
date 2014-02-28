@@ -11,7 +11,9 @@ module.exports = function (grunt) {
         },
 
         'concat': {
-            'options': {},
+            'options': {
+                'banner': '/*! <%= pkg.name %> - v<%= pkg.version %> */\n'
+            },
             'dist': {
                 'src': [
                     'src/intro.js',
@@ -32,11 +34,14 @@ module.exports = function (grunt) {
         'uglify': {
             'options': {
                 'mangle': {
-                    'expect': ['require']
-                }
+                    'except': ['require']
+                },
+                'banner': '/*! <%= pkg.name %> - v<%= pkg.version %> */\n'
             },
-            'files': {
-                'lib/miss.min.js': 'lib/miss.js'
+            'target': {
+                'files': {
+                    'lib/miss.min.js': 'lib/miss.js'
+                }
             }
         }
     });

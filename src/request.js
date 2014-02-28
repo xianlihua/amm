@@ -1,3 +1,5 @@
+var currentlyAddingScript, interactiveScript;
+
 function request (url, callback, charset) {
     var script = doc.createElement('script');
     script.async = 'async';
@@ -16,7 +18,6 @@ function request (url, callback, charset) {
     currentlyAddingScript = null;
 }
 
-var currentlyAddingScript, interactiveScript;
 function getCurrentScript() {
     if (currentlyAddingScript) {
         return currentlyAddingScript;
