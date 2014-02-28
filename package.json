@@ -1,0 +1,17 @@
+{
+    "name": "miss.js",
+    "version": "0.0.1",
+    "description": "a javascript module manager",
+    "main": "lib/miss.js",
+    "scripts": {
+        "build": "grunt build",
+        "start": "npm install && npm run build"
+    },
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-jshint": "*"
+    }
+}
