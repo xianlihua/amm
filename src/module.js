@@ -6,7 +6,7 @@ function Module (url, deps) {
     }
 
     // 模块 url
-    this.url = url; // Module.resolve(id);
+    this.url = url;
 
     // 依赖及未完成的依赖数量
     this.dependencies = (deps || []).filter(clean);
@@ -145,16 +145,7 @@ Module.resolve = function (id) {
         return id;
     }
 
-    var url = defaults.alias[id];
-    if (!url) {
-        return url;
-    }
-
-    if (url.indexOf('http://') !== 0) {
-        url = defaults.base + url;
-    }
-
-    return url.replace(/\\/g, '/');
+    return path.resolve(defaults.alias[id] || id);
 };
 
 // 分析模块依赖
@@ -281,6 +272,10 @@ function define (id, dependencies, factory) {
 }
 
 function use (dependencies, callback) {
+    if (!Array.isArray(dependencies)) {
+        dependencies = [dependencies];
+    }
+
     Module.preload(function () {
         Module.use(dependencies, callback, defaults.base + '_use_' + util.uid());
     });

@@ -113,3 +113,19 @@ test('输出依赖模块的输出值 miss.use -> a -> b', function (assert) {
         assert.equal(a.depends, 'b module result');
     });
 });
+
+test('无 alias 设置应该能正确找到模块', function (assert) {
+    stop();
+    miss.use(['mods/math'], function (math) {
+        start();
+        assert.equal(math.add(1, 2), 3);
+    });
+});
+
+test('入口仅 use 一个模块时，支持传入字符串表示', function (assert) {
+    stop();
+    miss.use('mods/math', function (math) {
+        start();
+        assert.equal(math.add(3, 2), 5);
+    });
+});
