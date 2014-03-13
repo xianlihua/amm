@@ -1,0 +1,15 @@
+{
+    "uglify": {
+        "options": {
+            "mangle": {
+                "except": ["require"]
+            },
+            "banner": "/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today('yyyy-mm-dd') %> */\n"
+        },
+        "target": {
+            "files": {
+                "lib/amm.min.js": "lib/amm.js"
+            }
+        }
+    }
+}

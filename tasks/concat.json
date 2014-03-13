@@ -1,0 +1,22 @@
+{
+    "concat": {
+        "options": {
+            "banner": "/*! <%= pkg.name %> (async module manager) - v<%= pkg.version %> */\n"
+        },
+        "dist": {
+            "src": [
+                "src/intro.js",
+                "src/lang.js",
+                "src/header.js",
+                "src/path.js",
+                "src/util.js",
+                "src/config.js",
+                "src/module.js",
+                "src/request.js",
+                "src/footer.js",
+                "src/outro.js"
+            ],
+            "dest": "lib/amm.js"
+        }
+    }
+}

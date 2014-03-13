@@ -1,0 +1,8 @@
+{
+    "jshint": {
+        "options": {
+            "jshintrc": ".jshintrc"
+        },
+        "all": ["lib/amm.js"]
+    }
+}

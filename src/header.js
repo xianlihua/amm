@@ -1,5 +1,5 @@
 // 命名空间
-var miss = root.miss = {};
+var amm = root.amm = {};
 
 var doc = root.document;
 var head = doc.head || doc.getElementsByTagName('head')[0] || doc.documentElement;

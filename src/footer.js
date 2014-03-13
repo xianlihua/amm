@@ -1,8 +1,8 @@
 // exports
 root.define = define;
-miss.use = use;
-miss.define = define;
-miss.alias = setAlias;
-miss.preload = setPreload;
-miss.base = setBase;
-miss.cache = cache;
+amm.use = use;
+amm.define = define;
+amm.alias = setAlias;
+amm.preload = setPreload;
+amm.base = setBase;
+amm.cache = cache;

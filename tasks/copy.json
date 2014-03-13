@@ -1,0 +1,8 @@
+{
+    "copy": {
+        "main": {
+            "src": "lib/amm.min.js",
+            "dest": "E:/svn/SafeIOS/src/www/v1/js/amm.js"
+        }
+    }
+}
