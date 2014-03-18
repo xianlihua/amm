@@ -129,3 +129,13 @@ test('入口仅 use 一个模块时，支持传入字符串表示', function (as
         assert.equal(math.add(3, 2), 5);
     });
 });
+
+test('简单的模块合并', function (assert) {
+    stop();
+    amm.use('mods/combo', function (c) {
+        var combo = c.combo;
+        start();
+        assert.equal(combo[0], 'anything1');
+        assert.equal(combo[1], 'anything1:anything2');
+    });
+});

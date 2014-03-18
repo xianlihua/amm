@@ -31,6 +31,7 @@ Module.prototype.fetch = function () {
         return;
     }
 
+
     mod.status = STATUS.FETCHING;
 
     request(url, function () {
@@ -90,6 +91,7 @@ Module.prototype.onload = function () {
     var mod = this;
 
     mod.status = STATUS.LOADED;
+
 
     if (mod.callback) {
         return mod.callback();
@@ -178,7 +180,7 @@ Module.save = function (url, meta) {
         return;
     }
 
-    throw new Error('u are tring to override module: ' + mod.url);
+    throw new Error('override module: ' + mod.url);
 };
 
 // 加载并执行依赖模块
