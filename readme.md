@@ -7,16 +7,16 @@ amm (async module manager) 是一个适用于浏览器端的 AMD/CMD 模块加�
 需要配置 [Node.js](http://nodejs.org/ "Node.js") 环境
 
 ```bash
-> npm install amm.js
-> cd amm.js
+> npm install amm
+> cd amm
 > npm start
 ```
 
 或者直接通过 `git` 拉取本项目到本地，执行下面的命令:
 
 ```bash
-> git clone https://github.com/xianlihua/amm.js
-> cd amm.js
+> git clone https://github.com/xianlihua/amm
+> cd amm
 > npm start
 ```
 
