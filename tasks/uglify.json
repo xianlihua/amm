@@ -4,7 +4,7 @@
             "mangle": {
                 "except": ["require"]
             },
-            "banner": "/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today('yyyy-mm-dd') %> */\n"
+            "banner": "/*! <%= pkg.name %> - v<%= pkg.version %> */\n"
         },
         "target": {
             "files": {
